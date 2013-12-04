@@ -1,0 +1,47 @@
+{
+  "name": "grunt-checktextdomain",
+  "description": "Checks gettext function calls for missing or incorrect text domain.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/stephenharris/grunt-checktextdomain",
+  "author": {
+    "name": "Stephen Harris",
+    "email": "contact@stephenharris.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenharris/grunt-checktextdomain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephenharris/grunt-checktextdomain/issues"
+  },
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/stephenharris/grunt-checktextdomain/blob/master/LICENSE-GPL"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "dependencies": {
+    "chalk": "~0.2.1",
+    "text-table": "~0.2.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
