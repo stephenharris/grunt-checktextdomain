@@ -43,5 +43,8 @@
   },
   "keywords": [
     "gruntplugin"
+    "i18n",
+    "gettext",
+    "wordpress"
   ]
 }
