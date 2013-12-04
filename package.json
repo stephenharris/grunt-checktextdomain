@@ -42,7 +42,7 @@
     "text-table": "~0.2.0"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
     "i18n",
     "gettext",
     "wordpress"
