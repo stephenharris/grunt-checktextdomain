@@ -156,13 +156,18 @@ grunt.registerMultiTask('checktextdomain', 'Checks gettext function calls for mi
 					}
 				}
 				
-			//Check for comma seperating arguments. TODO this could be buggy if gettext functions aren't used correctly.
-			}else if ( token === ',' && gettext_func.argument > 0 && gettext_func.line ){
+			//Check for comma seperating arguments. Only interested in 'top level' where parens_balance == 1
+			}else if ( token === ',' && parens_balance === 1 && gettext_func.line ){
 				gettext_func.argument++;
 	
-			//If in gettext function and found opening parenthesis, we are at first argument
+			//If we are an opening bracket, increment parens_balance
 			}else if( '(' === token && gettext_func.line  ){
-				gettext_func.argument = 1;
+				
+				//If in gettext function and found opening parenthesis, we are at first argument
+				if( gettext_func.argument === 0 ){
+					gettext_func.argument = 1;
+				}
+				
 				parens_balance++;
 	
 			//If in gettext function and found closing parenthesis,

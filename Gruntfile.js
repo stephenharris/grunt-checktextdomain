@@ -117,6 +117,17 @@ module.exports = function(grunt) {
         		src: ['test/tmp/variable-domain-autocorrect.php'],
         		expand: true,
         	}],
+		},
+    	plurals: {
+    		options:{
+    			text_domain: 'my-domain',
+    			create_report_file: true,
+    			keywords: keywords
+        	},
+        	files: [{
+        		src: ['test/tmp/plurals.php'],
+        		expand: true,
+        	}],
 		}
     },
 

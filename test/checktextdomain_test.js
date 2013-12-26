@@ -117,4 +117,20 @@ exports.textdomain = {
       test.done();
   },
   
+  
+  plurals: function(test) {  
+      test.expect(1);
+      
+      var target = 'plurals';
+      var actual = JSON.parse( grunt.file.read( '.' + target + ".json" ) );
+      
+      //File is correct, should report no errors
+      test.equal( actual["test/tmp/plurals.php"].length, 0, 'No errors reported' );
+      
+      //Clean up: Delete report file
+      //grunt.file.delete( '.' + target + ".json" );
+      
+      test.done();
+  },
+  
 };
