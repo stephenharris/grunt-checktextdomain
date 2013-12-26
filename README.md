@@ -169,4 +169,5 @@ This is a typical set-up for WordPress development. The only thing specific to W
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+* *0.1.1* - Fix bug where functions are used to pass value to gettext functions.
+* *0.1.0* - Initial release
