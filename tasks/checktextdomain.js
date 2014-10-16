@@ -247,10 +247,10 @@ grunt.registerMultiTask('checktextdomain', 'Checks gettext function calls for mi
 		//Reset errors
 		errors = [];
     });
-	
-	
+
+
 	if ( error_num > 0) {
-		console.log( "\n" + chalk.red.bold('✖ ' + error_num + ' problem' + (error_num === 1 ? '' : 's')) );
+		grunt.fail.warn( error_num + ' problem' + (error_num === 1 ? '' : 's') );
 	} else {
 		console.log( "\n" + chalk.green.bold('✔ No problems') +  "\n" );
 	}
