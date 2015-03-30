@@ -27,7 +27,7 @@ grunt.loadNpmTasks('grunt-checktextdomain');
 
 For the task to run you need to specify:
 
-1. **Text domain(s)** - a string or array of valid text domain
+1. **Text domain(s)** - a string or array of valid text domain(s)
 2. **Keywords** - gettext functions, along with a specification indicating where to look for the text domain
 
 
@@ -37,7 +37,7 @@ This task extends the original [keyword specification](http://www.gnu.org/softwa
 ``` 
     [function name]:[argument-specifier],[argument-specifier],...
 ```
-where an argument specificier is of the form
+where an argument specificier, `[argument-specifier]`, is of the form
 
  - `[number]` - indicating that this argument is a translatable string
  - `[number]c` - indicating that this argument is a context specifier
@@ -143,8 +143,8 @@ This is a typical set-up for WordPress development. The only thing specific to W
 
 ```js
     checktextdomain: {
-	standard{
-                  options:{
+	  standard{
+         options:{
 			text_domain: 'my-domain', //Specify allowed domain(s)
 			keywords: [ //List keyword specifications
 				'__:1,2d',
@@ -163,11 +163,11 @@ This is a typical set-up for WordPress development. The only thing specific to W
 				'_nx_noop:1,2,3c,4d'
 			]
 		},
-	    	files: [{
+		files: [{
 			src: ['**/*.php'], //all php 
 			expand: true,
 		}],
-	}
+	  }
     },
 ```
 
