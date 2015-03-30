@@ -62,6 +62,7 @@ module.exports = function(grunt) {
     checktextdomain: {
     	correct_domain: {
     		options:{
+    			force: true,
     			text_domain: 'my-domain',
     			create_report_file: true,
     			keywords: keywords
@@ -73,6 +74,7 @@ module.exports = function(grunt) {
 		},
     	missing_domain: {
     		options:{
+    			force: true,
     			text_domain: 'my-domain',
     			create_report_file: true,
     			keywords: keywords
@@ -84,6 +86,7 @@ module.exports = function(grunt) {
 		},
     	missing_domain_ignore_missing: {
     		options:{
+    			force: true,
     			text_domain: 'my-domain',
     			report_missing: false,
     			create_report_file: true,
@@ -96,6 +99,7 @@ module.exports = function(grunt) {
 		},
     	incorrect_domain_autocomplete: {
     		options:{
+    			force: true,
     			text_domain: 'my-domain',
     			correct_domain: true,
     			create_report_file: true,
@@ -108,6 +112,7 @@ module.exports = function(grunt) {
 		},
     	variable_domain_autocomplete: {
     		options:{
+    		    force: true,
     			text_domain: 'my-domain',
     			correct_domain: true,
     			create_report_file: true,
@@ -120,6 +125,7 @@ module.exports = function(grunt) {
 		},
     	plurals: {
     		options:{
+    		    force: true,
     			text_domain: 'my-domain',
     			create_report_file: true,
     			keywords: keywords
