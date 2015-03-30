@@ -25,6 +25,7 @@ grunt.registerMultiTask('checktextdomain', 'Checks gettext function calls for mi
 		report_variable_domain: true,
 		correct_domain: false,
 		create_report_file: false,
+		force: false,
 	});
 	
 	grunt.verbose.writeflags( options );
@@ -253,8 +254,10 @@ grunt.registerMultiTask('checktextdomain', 'Checks gettext function calls for mi
 		grunt.file.write( "." + this.target +".json", JSON.stringify( all_errors ) );
 	}
 
-	if ( error_num > 0) {
-		grunt.fail.warn( error_num + ' problem' + (error_num === 1 ? '' : 's') );
+	if ( error_num > 0 && !options.force ) {
+		grunt.fail.warn( error_num + ' problem' + (error_num === 1 ? '' : 's'), 6 );
+	}else if( error_num > 0 ){
+		console.log( "\n" + chalk.red.bold('✖ ' + error_num + ' problem' + (error_num === 1 ? '' : 's')) );
 	} else {
 		console.log( "\n" + chalk.green.bold('✔ No problems') +  "\n" );
 	}

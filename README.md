@@ -130,6 +130,13 @@ Default value: `false`
 
 Create a hidden `.[target].json` file with reported errors.
 
+#### force
+
+Type: `Bool`
+Default value: `false`
+
+Set force to true to report text domain errors but not fail the task
+
 ### Usage Examples
 
 This is a typical set-up for WordPress development. The only thing specific to WordPress here is the keywords list.
