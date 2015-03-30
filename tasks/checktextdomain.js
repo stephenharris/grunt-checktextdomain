@@ -247,16 +247,16 @@ grunt.registerMultiTask('checktextdomain', 'Checks gettext function calls for mi
 		//Reset errors
 		errors = [];
     });
-	
-	
-	if ( error_num > 0) {
-		console.log( "\n" + chalk.red.bold('✖ ' + error_num + ' problem' + (error_num === 1 ? '' : 's')) );
-	} else {
-		console.log( "\n" + chalk.green.bold('✔ No problems') +  "\n" );
-	}
+
 	
 	if( options.create_report_file ){
 		grunt.file.write( "." + this.target +".json", JSON.stringify( all_errors ) );
+	}
+
+	if ( error_num > 0) {
+		grunt.fail.warn( error_num + ' problem' + (error_num === 1 ? '' : 's') );
+	} else {
+		console.log( "\n" + chalk.green.bold('✔ No problems') +  "\n" );
 	}
 
   });
