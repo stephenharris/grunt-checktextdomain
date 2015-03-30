@@ -176,5 +176,6 @@ This is a typical set-up for WordPress development. The only thing specific to W
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* *1.0.0* - **Potential breaking change:** Grunt now aborts on error (`grunt.fail.warn`). Thanks to @alexVauch. [#4](https://github.com/stephenharris/grunt-checktextdomain/pull/4). Added `force` task to configure this behaviour.
 * *0.1.1* - Fix bug where functions are used to pass value to gettext functions.
 * *0.1.0* - Initial release

@@ -1,7 +1,7 @@
 {
   "name": "grunt-checktextdomain",
   "description": "Checks gettext function calls for missing or incorrect text domain.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/stephenharris/grunt-checktextdomain",
   "author": {
     "name": "Stephen Harris",
