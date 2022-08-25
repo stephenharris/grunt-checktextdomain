@@ -143,7 +143,7 @@ This is a typical set-up for WordPress development. The only thing specific to W
 
 ```js
     checktextdomain: {
-	  standard{
+	  standard:{
          options:{
 			text_domain: 'my-domain', //Specify allowed domain(s)
 			keywords: [ //List keyword specifications
